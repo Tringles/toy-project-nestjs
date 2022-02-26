@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    # environment:
     volumes:
       - ./:/app/
     restart: always
