@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  api-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # environment:
+    volumes:
+      - ./:/app/
+    restart: always
+    network_mode: "host"
