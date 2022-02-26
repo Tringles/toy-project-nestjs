@@ -5,9 +5,9 @@ import { AppService } from './app.service';
 import { typeORMConfig } from './configs/typeorm.config';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [
+		TypeOrmModule.forRoot(typeORMConfig)
+	],
 	controllers: [AppController],
 	providers: [AppService],
 })
