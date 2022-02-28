@@ -11,6 +11,6 @@ export class UserController {
         const { kakaoId, nickname, profileImage, email } = userInfoDto;
         console.log(`[API] user/signup ${kakaoId} ${nickname} ${profileImage} ${email}`);
 
-        return { id: await this.userService.signUp(userInfoDto) }
+        return { id: await this.userService.signUp(kakaoId, nickname, profileImage, email) }
     }
 }
